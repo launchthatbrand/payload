@@ -104,7 +104,9 @@
     "test:int:sqlite": "cross-env NODE_OPTIONS=\"--no-deprecation\" NODE_NO_WARNINGS=1 PAYLOAD_DATABASE=sqlite DISABLE_LOGGING=true jest --forceExit --detectOpenHandles --config=test/jest.config.js --runInBand",
     "test:types": "tstyche",
     "test:unit": "cross-env NODE_OPTIONS=\"--no-deprecation\" NODE_NO_WARNINGS=1 DISABLE_LOGGING=true jest --forceExit --detectOpenHandles  --config=jest.config.js --runInBand",
-    "translateNewKeys": "pnpm --filter translations run translateNewKeys"
+    "translateNewKeys": "pnpm --filter translations run translateNewKeys",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "lint-staged": {
     "**/package.json": "sort-package-json",
@@ -174,7 +176,19 @@
     "tstyche": "^3.1.1",
     "tsx": "4.19.2",
     "turbo": "^2.3.3",
-    "typescript": "5.7.3"
+    "typescript": "5.7.3",
+    "@storybook/addon-essentials": "^7.0.0",
+    "@storybook/addon-interactions": "^7.0.0",
+    "@storybook/addon-links": "^7.0.0",
+    "@storybook/blocks": "^7.0.0",
+    "@storybook/testing-library": "^0.2.0",
+    "storybook": "^7.0.0",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "@storybook/react": "^7.0.0",
+    "@storybook/react-webpack5": "^7.0.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/preset-react": "^7.18.0",
+    "@babel/preset-typescript": "^7.18.0"
   },
   "packageManager": "pnpm@9.7.1",
   "engines": {
